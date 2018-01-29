@@ -3,22 +3,89 @@
 @import "base";
 
 
+
+
+@media screen and (min-width: 641px) and (max-width: 989px) {
+	@import "tablet";
+}
 @media screen and (max-width: 640px) {
 	@import "mobile";
 }
-
-
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 990px) {
 	@import "desktop";
 } 
 
+
+
+
 #global-header {
 	width: 100%;
-	background-color: $modern1;
 }
 
 .header-wrapper {
-	max-width: 85%;
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 8px;
+	background-color: $modern1;
+	border-radius: 5px;
+	color: $modern1;
+	box-sizing: border-box;
+}
+
+.body-wrapper {
+	max-width: 90%;
 	margin: 0 auto;
 	padding: 8px 0;
+	box-sizing: border-box;
 }
+
+//test
+.fill {
+	background-color: $grey;
+	width: 100%;
+	height: 1200px;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+.fill1 {
+	background-color: $black;
+	width: 100%;
+	height: 200px;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+.fill2 {
+	background-color: $white;
+	width: 100%;
+	height: 200px;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+.fill3 {
+	background-color: $modern3;
+	width: 100%;
+	height: 200px;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+.fill4 {
+	background-color: $appealing3;
+	width: 100%;
+	height: 200px;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+.fill5 {
+	background-color: $majestic3;
+	width: 100%;
+	height: 200px;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+

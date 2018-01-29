@@ -64,11 +64,116 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
   display: table;
   clear: both; }
 
+@media screen and (min-width: 641px) and (max-width: 989px) {
+  .column-1, .column-2, .column-3 {
+    float: none;
+    width: 100%;
+    padding: 12.5px;
+    box-sizing: border-box; }
+
+  .column-4 {
+    float: left;
+    width: calc(100%/2);
+    padding: 12.5px;
+    box-sizing: border-box; }
+
+  .column-5 {
+    float: left;
+    width: calc(100%/3);
+    padding: 12.5px;
+    box-sizing: border-box; } }
+@media screen and (max-width: 640px) {
+  .column-1, .column-2, .column-3, .column-4, .column-5 {
+    float: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; } }
+@media screen and (min-width: 990px) {
+  .column-1 {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box; }
+
+  .column-2 {
+    float: left;
+    width: calc(100%/2);
+    padding: 15px;
+    box-sizing: border-box; }
+
+  .column-3 {
+    float: left;
+    width: calc(100%/3);
+    padding: 15px;
+    box-sizing: border-box; }
+
+  .column-4 {
+    float: left;
+    width: calc(100%/4);
+    padding: 15px;
+    box-sizing: border-box; }
+
+  .column-5 {
+    float: left;
+    width: calc(100%/5);
+    padding: 15px;
+    box-sizing: border-box; } }
 #global-header {
-  width: 100%;
-  background-color: #143cb4; }
+  width: 100%; }
 
 .header-wrapper {
-  max-width: 85%;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 8px 0; }
+  padding: 8px;
+  background-color: #143cb4;
+  border-radius: 5px;
+  color: #143cb4;
+  box-sizing: border-box; }
+
+.body-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 8px 0;
+  box-sizing: border-box; }
+
+.fill {
+  background-color: #bfc1c3;
+  width: 100%;
+  height: 1200px;
+  padding: 1em;
+  box-sizing: border-box; }
+
+.fill1 {
+  background-color: black;
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  box-sizing: border-box; }
+
+.fill2 {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  box-sizing: border-box; }
+
+.fill3 {
+  background-color: #a1dff6;
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  box-sizing: border-box; }
+
+.fill4 {
+  background-color: #fac864;
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  box-sizing: border-box; }
+
+.fill5 {
+  background-color: #c86491;
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  box-sizing: border-box; }
