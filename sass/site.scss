@@ -3,18 +3,17 @@
 @import "base";
 
 
-
+@media screen and (min-width: 990px) {
+	@import "desktop";
+}
 
 @media screen and (min-width: 641px) and (max-width: 989px) {
 	@import "tablet";
 }
+
 @media screen and (max-width: 640px) {
 	@import "mobile";
 }
-@media screen and (min-width: 990px) {
-	@import "desktop";
-} 
-
 
 
 
@@ -39,6 +38,48 @@
 	box-sizing: border-box;
 }
 
+.video-list-wrapper {
+	overflow: visible;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.video-list {
+	max-width: calc(100% - 100px);
+	margin: 0 auto;
+	overflow: hidden;
+}
+.video-list ul {
+	width: 3000px;
+}
+.video-list li {
+	list-style: none outside none;
+	float: left;
+	margin: 0 10px;
+}
+
+.video-list-control polygon {
+	fill: $grey;
+}
+
+.video-list-control a.prev {
+	position: absolute;
+	left: 5px;
+	top: 40%;
+}
+
+.video-list-control a.next {
+	position: absolute;
+	right: 5px;
+	top: 40%;
+}
+
+
+
 //test
 .fill {
 	background-color: $grey;
@@ -52,7 +93,6 @@
 	background-color: $black;
 	width: 100%;
 	height: 200px;
-	padding: 1em;
 	box-sizing: border-box;
 }
 
@@ -60,7 +100,6 @@
 	background-color: $white;
 	width: 100%;
 	height: 200px;
-	padding: 1em;
 	box-sizing: border-box;
 }
 
@@ -68,7 +107,6 @@
 	background-color: $modern3;
 	width: 100%;
 	height: 200px;
-	padding: 1em;
 	box-sizing: border-box;
 }
 
@@ -76,7 +114,6 @@
 	background-color: $appealing3;
 	width: 100%;
 	height: 200px;
-	padding: 1em;
 	box-sizing: border-box;
 }
 
@@ -84,8 +121,5 @@
 	background-color: $majestic3;
 	width: 100%;
 	height: 200px;
-	padding: 1em;
 	box-sizing: border-box;
 }
-
-
