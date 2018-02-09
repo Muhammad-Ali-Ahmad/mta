@@ -39,32 +39,46 @@
 }
 
 .video-list-wrapper {
-	overflow: visible;
+	display: block;
 	position: relative;
-	text-align: center;
-	-webkit-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	@media screen and (min-width: 1304px) {
+		width: 100%;
+	}
+	@media screen and (min-width: 1090px) and (max-width: 1303px) {
+		width: 1070px;
+	}
+	@media screen and (min-width: 876px) and (max-width: 1089px) {
+		width: 856px;
+	}
+	@media screen and (min-width: 662px) and (max-width: 875px) {
+		width: 642px;
+	}
+	@media screen and (max-width: 661px) {
+		width: 280px;
+	}
 }
 .video-list {
 	max-width: calc(100% - 100px);
 	margin: 0 auto;
 	overflow: hidden;
 }
-.video-list ul {
-	width: 3500px;
-	transition: 1s ease-out;
+
+.items {
+	transform: translateX(0px);
+	display: inline-block;
+	transition-duration: 0.15s;
+	transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+	will-change: transform;
+	white-space: nowrap;
 }
+
 .video-list li {
 	list-style: none outside none;
-	float: left;
-	margin: 0 10px;
-	list-style: none;
+	padding-right: 4px;
 	display: inline-block;
-	width: 200px;
-	height: 200px;
+	vertical-align: top;
+	white-space: normal;
+	list-style: none;
 }
 
 .video-list-control polygon {
