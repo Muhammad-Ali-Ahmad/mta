@@ -136,6 +136,9 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
   padding: 8px 0;
   box-sizing: border-box; }
 
+.content, .video-list-control, .video-list, .scroll-container, .items {
+  background-attachment: scroll; }
+
 .video-list-wrapper {
   display: block;
   position: relative; }
@@ -156,25 +159,30 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
       width: 280px; } }
 
 .video-list {
-  max-width: calc(100% - 100px);
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  display: block; }
+
+.scroll-container {
+  overflow-x: hidden; }
 
 .items {
-  transform: translateX(0px);
+  transform: translateX(0px); }
+
+.horizontal-list {
   display: inline-block;
   transition-duration: 0.15s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   will-change: transform;
   white-space: nowrap; }
 
-.video-list li {
-  list-style: none outside none;
+.video-container {
   padding-right: 4px;
   display: inline-block;
   vertical-align: top;
   white-space: normal;
-  list-style: none; }
+  width: 300px; }
 
 .video-list-control polygon {
   fill: #bfc1c3; }
