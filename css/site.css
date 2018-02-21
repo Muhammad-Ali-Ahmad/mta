@@ -136,7 +136,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
   padding: 8px 0;
   box-sizing: border-box; }
 
-.video-list-wrapper {
+.list-wrapper {
   overflow: visible;
   position: relative;
   text-align: center;
@@ -146,33 +146,44 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
   -ms-user-select: none;
   user-select: none; }
 
-.video-list {
+.list {
   max-width: calc(100% - 100px);
   margin: 0 auto;
   overflow: hidden; }
 
-.video-list ul {
+.list ul {
   width: 3500px;
   transition: 1s ease-out; }
 
-.video-list li {
+.list li {
   list-style: none outside none;
   float: left;
   margin: 0 10px;
   list-style: none;
-  display: inline-block;
-  width: 200px;
-  height: 200px; }
+  display: inline-block; }
+  @media screen and (min-width: 990px) {
+    .list li {
+      max-width: 320px; } }
+  @media screen and (min-width: 641px) and (max-width: 989px) {
+    .list li {
+      max-width: 220px; } }
+  @media screen and (max-width: 640px) {
+    .list li {
+      max-width: 100%; } }
 
-.video-list-control polygon {
+picture img {
+  height: auto;
+  width: 100%; }
+
+.list-control polygon {
   fill: #bfc1c3; }
 
-.video-list-control a.prev {
+.list-control a.prev {
   position: absolute;
   left: 5px;
   top: 40%; }
 
-.video-list-control a.next {
+.list-control a.next {
   position: absolute;
   right: 5px;
   top: 40%; }
