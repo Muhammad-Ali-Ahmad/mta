@@ -44,20 +44,22 @@
 .video-list-wrapper {
 	display: block;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 	@media screen and (min-width: 1304px) {
-		width: 100%;
+		width: 1227px;
 	}
-	@media screen and (min-width: 1090px) and (max-width: 1303px) {
-		width: 1070px;
+	@media screen and (min-width: 1052px) and (max-width: 1393px) {
+		width: 921px;
 	}
-	@media screen and (min-width: 876px) and (max-width: 1089px) {
-		width: 856px;
+	@media screen and (min-width: 711px) and (max-width: 1051px) {
+		width: 615px;
 	}
-	@media screen and (min-width: 662px) and (max-width: 875px) {
-		width: 642px;
+	@media screen and (min-width: 305px) and (max-width: 710px) {
+		width: 306px;
 	}
-	@media screen and (max-width: 661px) {
-		width: 280px;
+	@media screen and (max-width: 304px) {
+		width: 306px;
 	}
 }
 .video-list {
@@ -108,6 +110,10 @@
 	top: 40%;
 }
 
+picture img {
+	height: auto;
+	width: 100%;
+}
 
 //test
 .fill {
