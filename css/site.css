@@ -161,8 +161,11 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
   margin: 0 10px;
   list-style: none;
   display: inline-block;
-  width: 200px;
-  height: 200px; }
+  width: 300px; }
+
+.video-container img {
+  height: auto;
+  width: 100%; }
 
 .video-list-control polygon {
   fill: #bfc1c3; }
