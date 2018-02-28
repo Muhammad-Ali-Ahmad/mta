@@ -91,12 +91,15 @@
 
 .video-list-control polygon {
 	fill: $grey;
+	stroke-width: 3px;
+	stroke: $modern1;
 }
 
 .video-list-control a.prev {
 	position: absolute;
 	left: 5px;
 	top: 30%;
+	display: none;
 }
 
 .video-list-control a.next {
