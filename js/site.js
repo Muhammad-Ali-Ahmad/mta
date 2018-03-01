@@ -27,16 +27,11 @@ function videoScroll() {
 	});
 
 	$('a.prev').click(function(){
-		console.log(defaultWrapperWidth)
-		if (defaultWrapperWidth == 345 && wrapperWidth == 615) {
-			$('.video-list-control a.prev').css('display', 'none');
-		} else if (defaultWrapperWidth == 615 && wrapperWidth == 1155) {
-			$('.video-list-control a.prev').css('display', 'none');
-		} else if (defaultWrapperWidth == 885 && wrapperWidth == 1695) {
-			$('.video-list-control a.prev').css('display', 'none');
-		} else if (defaultWrapperWidth == 1155 && wrapperWidth == 2235){
-			$('.video-list-control a.prev').css('display', 'none');
-		} else if (defaultWrapperWidth == 1425 && wrapperWidth == 2775) {
+		if (defaultWrapperWidth == 345 && wrapperWidth == 615 ||
+			defaultWrapperWidth == 615 && wrapperWidth == 1155 ||
+			defaultWrapperWidth == 885 && wrapperWidth == 1695 ||
+			defaultWrapperWidth == 1155 && wrapperWidth == 2235 ||
+			defaultWrapperWidth == 1425 && wrapperWidth == 2775) {
 			$('.video-list-control a.prev').css('display', 'none');
 		} else {
 			$('.video-list-control a.prev').css('display', 'block');
