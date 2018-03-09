@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 
-	$(window).resize(function() {
-		videoScroll();
-	});
+	// $(window).resize(function() {
+	// 	videoScroll();
+	// });
 
 	videoScroll();
 
