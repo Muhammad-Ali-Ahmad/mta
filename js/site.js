@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 
-	// $(window).resize(function() {
-	// 	videoScroll();
-	// });
+	$(window).resize(function() {
+		videoScroll();
+	});
 
 	videoScroll();
 
@@ -13,17 +13,25 @@ $(document).ready(function(){
 
 
 function videoScroll() {
-	var wrapperWidth = $('.video-list-wrapper').width(),
-	    i = 1,
+	var i = 1,
 	    shift = 0,
-	    itemLength = $('.video-list li').width(),
-	    numberOfItems = $('.video-list li').length,
-	    numberOfItemsOnScreen = (Math.floor(wrapperWidth/itemLength)),
-	    remainder = numberOfItems % numberOfItemsOnScreen,
+	    wrapperWidth,
+	    itemLength,
+	    numberOfItems,
+	    numberOfItemsOnScreen,
+	    remainder,
+		numberOfTimesToScroll,
+		itemLengthWithMargin;
+
+	$('a.next').click(function(){
+		wrapperWidth = $('.video-list-wrapper').width(),
+		itemLength = $('.video-list li').width(),
+		numberOfItems = $('.video-list li').length,
+		numberOfItemsOnScreen = (Math.floor(wrapperWidth/itemLength)),
+		remainder = numberOfItems % numberOfItemsOnScreen,
 		numberOfTimesToScroll = Math.floor(numberOfItems / numberOfItemsOnScreen),
 		itemLengthWithMargin = (itemLength*numberOfItemsOnScreen) + (numberOfItemsOnScreen * 20);
 
-	$('a.next').click(function(){	
 		if(i < numberOfTimesToScroll){
 			shift = (itemLengthWithMargin * i);
 			i++;
@@ -41,6 +49,14 @@ function videoScroll() {
 	});
 
 	$('a.prev').click(function(){
+		wrapperWidth = $('.video-list-wrapper').width(),
+		itemLength = $('.video-list li').width(),
+		numberOfItems = $('.video-list li').length,
+		numberOfItemsOnScreen = (Math.floor(wrapperWidth/itemLength)),
+		remainder = numberOfItems % numberOfItemsOnScreen,
+		numberOfTimesToScroll = Math.floor(numberOfItems / numberOfItemsOnScreen),
+		itemLengthWithMargin = (itemLength*numberOfItemsOnScreen) + (numberOfItemsOnScreen * 20);
+
 		if(i > 1){
 			i--;
 			shift -= itemLengthWithMargin;
