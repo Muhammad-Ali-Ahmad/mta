@@ -1,26 +1,15 @@
 $(document).ready(function(){
-
-
-	// $(window).resize(function() {
-	// 	videoScroll();
-	// });
-
 	videoScroll();
-
-
 });
 
 
 
 function videoScroll() {
-	var i = 1,
-	    shift = 0,
+	var shift = 0,
 	    wrapperWidth,
 	    itemLength,
 	    numberOfItems,
 	    numberOfItemsOnScreen,
-	    remainder,
-		numberOfTimesToScroll,
 		itemLengthWithMargin,
 		firstItemOnScreen = ((Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()))/Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()));
 
