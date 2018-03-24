@@ -38,8 +38,8 @@ html {
   /* 2 */ }
 
 body {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased; }
 
@@ -207,12 +207,12 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
   box-sizing: border-box; }
 
 .fill1 {
-  background-color: black;
+  background-color: #000;
   height: 200px;
   box-sizing: border-box; }
 
 .fill2 {
-  background-color: white;
+  background-color: #fff;
   height: 200px;
   box-sizing: border-box; }
 
@@ -257,3 +257,5 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
 
 .mta1LiveProgressContainer > span {
   background-color: #143cb4; }
+
+/*# sourceMappingURL=site.css.map */

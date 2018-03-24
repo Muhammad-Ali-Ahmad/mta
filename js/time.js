@@ -1,27 +1,16 @@
-var s = "23:15";
-var e = "00:30";
+var s = "23:00";
+var e = "02:15";
 
 
 function programmeBarPrecentage(start, end) {
     "use strict";
     start = start.split(":");
     end = end.split(":");
-    var now = new Date("March 23, 2018 23:45:00"),
-        day = now.getDate(),
-        month = now.getMonth(),
-        year = now.getFullYear(),
-        programmeStart = new Date(year, month, day, start[0], start[1], 0),
-        programmeEnd = new Date(year, month, day, end[0], end[1], 0);
-
-        // if(end[0] == '00'){
-        //     programmeEnd.setDate(programmeEnd.getDate() + 1);
-        // }
-
-        var programmeLength = programmeEnd.getTime() - programmeStart.getTime(),
-        programmeLengthInMinutes = programmeLength / 1000 / 60,
-        playedsofar = programmeEnd.getTime() - now.getTime(),
-        minutesRemaining = playedsofar / 60000,
-        precentage = Math.floor(100 - ((minutesRemaining / programmeLengthInMinutes) * 100));
+    var now = new Date("March 25, 2018 00:15:00"),
+        programmeLength = getProgrammeLength(start, end),
+        programmeEnd = getProgrammeEnd(now, start, end, programmeLength["hour"], programmeLength["minutes"]),
+        minutesRemaining = (programmeEnd.getTime() - now.getTime()) / 60000,
+        precentage = Math.floor(100 - ((minutesRemaining / programmeLength["totalMinutes"]) * 100));
 
     if(precentage < 0) {
         return 0
@@ -30,16 +19,53 @@ function programmeBarPrecentage(start, end) {
     } else {
         return precentage
     }
-    // if(precentage > 0 && precentage <= 100) {
-    //     return precentage
-    // } else {
-    //     return 100
-    // }
 }
 
 
+function getProgrammeLength (start, end) {
+    var hour = end[0] - start[0],
+        minutes = end[1] - start[1];
+
+        if (hour < 0) {
+            hour += 24
+        }
+        if (minutes < 0) {
+            minutes += 60;
+            hour--;
+        }
+        return {hour: hour, 
+                minutes: minutes,
+                totalMinutes: minutes+(hour*60)}
+}
 
 
+function getProgrammeEnd(now, start, end, hour, minutes) {
+        var endingHour,
+        endingMinutes,
+        endingDate,
+        day = now.getDate(),
+        month = now.getMonth(),
+        year = now.getFullYear(),
+        hourNow = now.getHours(),
+        midnight = new Date(month+1 + " " + day +", " + year + " 23:59:59");
+
+        endingMinutes  = Number(start[1]) + minutes;
+        endingHour = Number(start[0]) + hour;
+
+        if (endingMinutes > 60) {
+            endingMinutes -= 60;
+            endingHour++
+        }
+
+        if(endingHour >= 24) {
+            endingHour -= 24;
+            if(now.getTime() < midnight.getTime()) {
+                day++;
+            }
+        }
+
+        return new Date(year, month, day, endingHour, endingMinutes, 0);
+}
 // custom time
 //    var now = new Date((1516109400*1000));
 
