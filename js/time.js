@@ -47,7 +47,13 @@ function getProgrammeEnd(now, start, end, hour, minutes) {
         month = now.getMonth(),
         year = now.getFullYear(),
         hourNow = now.getHours(),
-        midnight = new Date(month+1 + " " + day +", " + year + " 23:59:59");
+        midnight;
+
+        if(Number(start[0]) > 21 && Number(end[0] < 3) && hourNow >= 21) {
+            midnight = new Date(month+1 + " " + (day+1) +", " + year + " 00:00:00");
+        } else {
+            midnight = new Date(month+1 + " " + day +", " + year + " 00:00:00");
+        }
 
         endingMinutes  = Number(start[1]) + minutes;
         endingHour = Number(start[0]) + hour;
