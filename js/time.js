@@ -47,19 +47,23 @@ function programmeBarPrecentage() {
     var now = new Date();
     var timeDiff = now.getTimezoneOffset();
     var utcNow;
+    var utcEnd;
 
     if (timeDiff < 0) {
-        utcNow = (start.getTime() / 60000) + timeDiff;
+        utcNow = (now.getTime() / 60000) //+ timeDiff;
+        utcEnd = (end.getTime() / 60000) //+ timeDiff;
     } else if (timeDiff > 0) {
-        utcNow = (start.getTime() / 60000) - timeDiff;
+        utcNow = (now.getTime() / 60000) //- timeDiff;
+        utcEnd = (end.getTime() / 60000)// - timeDiff;
     } else {
-        utcNow = start.getTime();
+        utcNow = now.getTime();
+        utcEnd = end.getTime();
     }
 
     var programmeLength = (end.getTime() - start.getTime()) / 60000;
     //var programmeEnd = getProgrammeEnd(start, end, programmeLength.hour, programmeLength.minutes);
-    var minutesRemaining = ((end.getTime() / 60000) - utcNow);
-    var precentage = Math.floor(100 - ((minutesRemaining / programmeLength.totalMinutes) * 100));
+    var minutesRemaining = (utcEnd - utcNow);
+    var precentage = Math.floor(100 - ((minutesRemaining / programmeLength) * 100));
 
     if (precentage < 0) {
         return 0;
