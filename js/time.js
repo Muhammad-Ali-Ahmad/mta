@@ -4,65 +4,27 @@ var e = "12:00";
 
 
 
-function getProgrammeEnd(now, start, end, hour, minutes) {
-    "use strict";
-    var endingHour;
-    var endingMinutes;
-    var day = now.getDate();
-    var month = now.getMonth();
-    var year = now.getFullYear();
-    var hourNow = now.getHours();
-
-    endingMinutes = Number(start[1]) + minutes;
-    endingHour = Number(start[0]) + hour;
-
-    if (endingMinutes > 60) {
-        endingMinutes -= 60;
-        endingHour += 1;
-    }
-
-    if (endingHour >= 24) {
-        endingHour -= 24;
-        var midnight;
-        if (Number(start[0]) >= 21 && Number(end[0] < 3) && hourNow >= 21) {
-            midnight = new Date(month + 1 + " " + (day + 1) + ", " + year + " 00:00:00");
-        } else {
-            midnight = new Date(month + 1 + " " + day + ", " + year + " 00:00:00");
-        }
-
-        if (now.getTime() < midnight.getTime()) {
-            day += 1;
-        }
-    }
-
-    return new Date(year, month, day, endingHour, endingMinutes, 0);
-}
-
 function programmeBarPrecentage() {
     "use strict";
-    var startDateObj =  $('.date-display-start').get(0).getAttribute('content');
-    var endDateObj = $('.date-display-end').get(0).getAttribute('content');
-    var start = new Date(startDateObj);
-    var end = new Date(endDateObj);
+    var start = new Date($(".date-display-start").get(0).getAttribute("content"));
+    var end = new Date($(".date-display-end").get(0).getAttribute("content"));
     var now = new Date();
     var timeDiff = now.getTimezoneOffset();
+    var programmeLength = (end.getTime() - start.getTime()) / 60000;
     var utcNow;
     var utcEnd;
 
     if (timeDiff < 0) {
-        utcNow = (now.getTime() / 60000) //+ timeDiff;
-        utcEnd = (end.getTime() / 60000) //+ timeDiff;
+        utcNow = new Date(now.setMinutes((now.getMinutes()) + timeDiff));
+        utcEnd = new Date(end.setMinutes((end.getMinutes()) + timeDiff));
     } else if (timeDiff > 0) {
-        utcNow = (now.getTime() / 60000) //- timeDiff;
-        utcEnd = (end.getTime() / 60000)// - timeDiff;
+        utcNow = now.setMinutes((now.getMinutes() / 60000) - timeDiff);
+        utcEnd = end.setMinutes((end.getMinutes() / 60000) - timeDiff);
     } else {
         utcNow = now.getTime();
         utcEnd = end.getTime();
     }
-
-    var programmeLength = (end.getTime() - start.getTime()) / 60000;
-    //var programmeEnd = getProgrammeEnd(start, end, programmeLength.hour, programmeLength.minutes);
-    var minutesRemaining = (utcEnd - utcNow);
+    var minutesRemaining = (utcEnd - utcNow) / 60000;
     var precentage = Math.floor(100 - ((minutesRemaining / programmeLength) * 100));
 
     if (precentage < 0) {
