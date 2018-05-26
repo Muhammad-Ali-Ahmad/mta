@@ -3,6 +3,11 @@ $(document).ready(function(){
 });
 
 
+function firstItemOnScreen2(videoListWrapper, videoListLi) {
+	return ((Math.floor(
+		$(videoListWrapper).width()/$(videoListLi).width()
+		))/Math.floor($(videoListWrapper).width()/$(videoListLi).width()));
+}
 
 function videoScroll() {
 	var shift = 0,
@@ -11,12 +16,17 @@ function videoScroll() {
 	    numberOfItems,
 	    numberOfItemsOnScreen,
 		itemLengthWithMargin,
-		firstItemOnScreen = ((Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()))/Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()));
+		firstItemOnScreen,
+		firstItemOnScreen1 = ((Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()))/Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()));
 
 	$('a.next').click(function(){
-		wrapperWidth = $('.video-list-wrapper').width(),
-		itemLength = $('.video-list li').width(),
-		numberOfItems = $('.video-list li').length,
+		var that = this;
+		var currentVideoWrapper = $(that).parents('.video-list-wrapper');
+
+		firstItemOnScreen = firstItemOnScreen2(currentVideoWrapper, currentVideoWrapper.find('.video-list li'));
+		wrapperWidth = currentVideoWrapper.width(),
+		itemLength = currentVideoWrapper.find('.video-list li').width(),
+		numberOfItems = currentVideoWrapper.find('.video-list li').length,
 		numberOfItemsOnScreen = (Math.floor(wrapperWidth/itemLength)),
 		itemLengthWithMargin = itemLength + 20,
 		numberOfItemsRemaining = numberOfItems - firstItemOnScreen - (numberOfItemsOnScreen -1);
