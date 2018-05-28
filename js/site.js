@@ -2,13 +2,6 @@ $(document).ready(function() {
     videoScroll();
 });
 
-
-function firstItemOnScreen2(videoListWrapper, videoListLi) {
-    return ((Math.floor(
-        $(videoListWrapper).width() / $(videoListLi).width()
-    )) / Math.floor($(videoListWrapper).width() / $(videoListLi).width()));
-}
-
 function videoScroll() {
     var shift = 0;
     var wrapperWidth;
@@ -20,7 +13,7 @@ function videoScroll() {
 
     $("a.next").click(function() {
         var that = this;
-        currentVideoWrapper = $(that).parents(".video-list-wrapper");
+        var currentVideoWrapper = $(that).parents(".video-list-wrapper");
         wrapperWidth = currentVideoWrapper.width();
         itemLength = currentVideoWrapper.find(".video-list li").width();
         numberOfItems = currentVideoWrapper.find(".video-list li").length;
@@ -31,7 +24,7 @@ function videoScroll() {
         if (typeof firstItemOnScreen == "undefined") {
             firstItemOnScreen = 1;
         } else {
-            firstItemOnScreen = parseInt(firstItemOnScreen, 10)
+            firstItemOnScreen = parseInt(firstItemOnScreen, 10);
 
         }
 
@@ -56,8 +49,8 @@ function videoScroll() {
     });
 
     $("a.prev").click(function() {
-        var that = this,
-            currentVideoWrapper = $(that).parents(".video-list-wrapper");
+        var that = this;
+        var currentVideoWrapper = $(that).parents(".video-list-wrapper");
         wrapperWidth = currentVideoWrapper.width();
         itemLength = currentVideoWrapper.find(".video-list li").width();
         numberOfItems = currentVideoWrapper.find(".video-list li").length;
@@ -74,7 +67,7 @@ function videoScroll() {
             firstItemOnScreen -= numberOfItemsRemaining;
         }
 
-        if (shift == 0) {
+        if (shift === 0) {
             prev(currentVideoWrapper, "none");
         }
         next(currentVideoWrapper, "block");
