@@ -1,74 +1,88 @@
-$(document).ready(function(){
-	videoScroll();
+$(document).ready(function() {
+    videoScroll();
 });
 
-
-
 function videoScroll() {
-	var shift = 0,
-	    wrapperWidth,
-	    itemLength,
-	    numberOfItems,
-	    numberOfItemsOnScreen,
-		itemLengthWithMargin,
-		firstItemOnScreen = ((Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()))/Math.floor($('.video-list-wrapper').width()/$('.video-list li').width()));
+    var shift = 0;
+    var wrapperWidth;
+    var itemLength;
+    var numberOfItems;
+    var numberOfItemsOnScreen;
+    var firstItemOnScreen;
+    var itemLengthWithMargin;
 
-	$('a.next').click(function(){
-		wrapperWidth = $('.video-list-wrapper').width(),
-		itemLength = $('.video-list li').width(),
-		numberOfItems = $('.video-list li').length,
-		numberOfItemsOnScreen = (Math.floor(wrapperWidth/itemLength)),
-		itemLengthWithMargin = itemLength + 20,
-		numberOfItemsRemaining = numberOfItems - firstItemOnScreen - (numberOfItemsOnScreen -1);
+    $("a.next").click(function() {
+        var that = this;
+        var currentVideoWrapper = $(that).parents(".video-list-wrapper");
+        wrapperWidth = currentVideoWrapper.width();
+        itemLength = currentVideoWrapper.find(".video-list li").width();
+        numberOfItems = currentVideoWrapper.find(".video-list li").length;
+        numberOfItemsOnScreen = (Math.floor(wrapperWidth / itemLength));
+        firstItemOnScreen = currentVideoWrapper.attr("data-first-video");
+        itemLengthWithMargin = itemLength + 20;
 
-		if(numberOfItemsRemaining >= numberOfItemsOnScreen) {
-			shift = (firstItemOnScreen + numberOfItemsOnScreen - 1) * itemLengthWithMargin;
-			if(numberOfItemsOnScreen == numberOfItemsRemaining) {
-				next('none');
-			}
-			firstItemOnScreen += numberOfItemsOnScreen;
-		} else {
-			shift = (firstItemOnScreen + numberOfItemsRemaining - 1) * itemLengthWithMargin;
-			next('none');
-			firstItemOnScreen += numberOfItemsRemaining;
-		}
-		
-		prev('block');
-		$('.video-list ul').css('transform', 'translate3d(-' + shift + 'px, 0px, 0px)');
-	});
+        if (typeof firstItemOnScreen == "undefined") {
+            firstItemOnScreen = 1;
+        } else {
+            firstItemOnScreen = parseInt(firstItemOnScreen, 10);
 
-	$('a.prev').click(function(){
-		wrapperWidth = $('.video-list-wrapper').width(),
-		itemLength = $('.video-list li').width(),
-		numberOfItems = $('.video-list li').length,
-		numberOfItemsOnScreen = (Math.floor(wrapperWidth/itemLength)),
-		itemLengthWithMargin = itemLength + 20,
-		numberOfItemsRemaining = firstItemOnScreen - 1;
+        }
 
-		if(numberOfItemsRemaining >= numberOfItemsOnScreen) {
-			shift = (firstItemOnScreen - numberOfItemsOnScreen - 1) * itemLengthWithMargin;
-			firstItemOnScreen -= numberOfItemsOnScreen;
-		} else {
-			shift = (firstItemOnScreen - numberOfItemsRemaining - 1) * itemLengthWithMargin;
-			firstItemOnScreen -= numberOfItemsRemaining;
-		}
-		
-		if (shift == 0) {
-			prev('none');
-		}
-		next('block');
-		$('.video-list ul').css('transform', 'translate3d(-'+ shift + 'px, 0px, 0px)');
-	});
+        var numberOfItemsRemaining = numberOfItems - firstItemOnScreen - (numberOfItemsOnScreen - 1);
+
+
+        if (numberOfItemsRemaining >= numberOfItemsOnScreen) {
+            shift = (firstItemOnScreen + numberOfItemsOnScreen - 1) * itemLengthWithMargin;
+            if (numberOfItemsOnScreen == numberOfItemsRemaining) {
+                next(currentVideoWrapper, "none");
+            }
+            firstItemOnScreen += numberOfItemsOnScreen;
+        } else {
+            shift = (firstItemOnScreen + numberOfItemsRemaining - 1) * itemLengthWithMargin;
+            next(currentVideoWrapper, "none");
+            firstItemOnScreen += numberOfItemsRemaining;
+        }
+
+        prev(currentVideoWrapper, "block");
+        currentVideoWrapper.find(".video-list ul").css("transform", "translate3d(-" + shift + "px, 0px, 0px)");
+        currentVideoWrapper.attr("data-first-video", firstItemOnScreen);
+    });
+
+    $("a.prev").click(function() {
+        var that = this;
+        var currentVideoWrapper = $(that).parents(".video-list-wrapper");
+        wrapperWidth = currentVideoWrapper.width();
+        itemLength = currentVideoWrapper.find(".video-list li").width();
+        numberOfItems = currentVideoWrapper.find(".video-list li").length;
+        numberOfItemsOnScreen = (Math.floor(wrapperWidth / itemLength));
+        itemLengthWithMargin = itemLength + 20;
+        firstItemOnScreen = parseInt(currentVideoWrapper.attr("data-first-video"), 10);
+        var numberOfItemsRemaining = firstItemOnScreen - 1;
+
+        if (numberOfItemsRemaining >= numberOfItemsOnScreen) {
+            shift = (firstItemOnScreen - numberOfItemsOnScreen - 1) * itemLengthWithMargin;
+            firstItemOnScreen -= numberOfItemsOnScreen;
+        } else {
+            shift = (firstItemOnScreen - numberOfItemsRemaining - 1) * itemLengthWithMargin;
+            firstItemOnScreen -= numberOfItemsRemaining;
+        }
+
+        if (shift === 0) {
+            prev(currentVideoWrapper, "none");
+        }
+        next(currentVideoWrapper, "block");
+        currentVideoWrapper.find(".video-list ul").css("transform", "translate3d(-" + shift + "px, 0px, 0px)");
+        currentVideoWrapper.attr("data-first-video", firstItemOnScreen);
+    });
 }
 
-function next(display) {
-	$('.video-list-control a.next').css('display', display);
+function next(currentVideoWrapper, display) {
+    $(currentVideoWrapper).find(".video-list-control a.next").css("display", display);
 }
 
-function prev(display) {
-	$('.video-list-control a.prev').css('display', display);
+function prev(currentVideoWrapper, display) {
+    $(currentVideoWrapper).find(".video-list-control a.prev").css("display", display);
 }
-
 
 // function videoScroll1() {
 // 	var i = 1,
