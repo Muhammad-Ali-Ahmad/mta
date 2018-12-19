@@ -32,3 +32,57 @@
 	padding: 15px;
 	box-sizing: border-box;
 }
+
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 5px;
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transition: background-color 0.2s ease-out;
+  background-color: #f55555;
+}
+
+.form {
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+form {
+	border: 2px solid #e6e4e2;
+	padding: 1.5rem 3rem;
+	border-radius: 0.5rem;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin: 0.5rem 0 1rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form label {
+	margin-bottom: 0.5rem; 
+	font-size: 1.1rem;
+	line-height: 1.5;
+}

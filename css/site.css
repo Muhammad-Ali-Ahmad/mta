@@ -122,10 +122,47 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0.5rem;
+    border-radius: 5px;
     color: #fff;
     background-color: red;
     text-decoration: none;
+  }
+
+  .btn:hover {
+    transition: background-color 0.2s ease-out;
+    background-color: #f55555;
+  }
+
+  .form {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form {
+    border: 2px solid #e6e4e2;
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+  }
+
+  .form-input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .form label {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }
 @media screen and (min-width: 641px) and (max-width: 989px) {
