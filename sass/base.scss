@@ -1,3 +1,24 @@
+/*********************
+BASE STYLES 
+*********************/
+
+/*********************
+COLOURS 
+*********************/
+$white:  #fff;
+$black: #000;
+$grey: #bfc1c3;
+$modern1: #143cb4;
+$modern2: #5069d7;
+$modern3: #a1dff6;
+$majestic1: #3c0a6e;
+$majestic2: #91284b;
+$majestic3: #c86491;
+$appealing1: #835d27;
+$appealing2: #d7964b;
+$appealing3:#fac864;
+
+
 article,
 aside,
 details,
@@ -18,45 +39,21 @@ summary {
 
 html {
     -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
-}
-
-b,
-strong {
-    font-weight: bold;
-}
-
-.italic {
-    font-style: italic;
-}
-
-$white:  #fff;
-$black: #000;
-$grey: #bfc1c3;
-$modern1: #143cb4;
-$modern2: #5069d7;
-$modern3: #a1dff6;
-$majestic1: #3c0a6e;
-$majestic2: #91284b;
-$majestic3: #c86491;
-$appealing1: #835d27;
-$appealing2: #d7964b;
-$appealing3:#fac864;
-
-html {
-    -webkit-text-size-adjust: 100%; /* 2 */
     -moz-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
     -o-text-size-adjust: 100%; /* 2 */
 }
 
 body {
-	background: $white;
-	color: $black;
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+    background: $white;
+    color: $black;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
+/*********************
+TYPOGRAPHY 
+*********************/
 html, body, button, input, table, td, th {
 	font-family: Helvetica, Arial, Verdana, "latoregular", sans-serif;
 }
@@ -76,7 +73,18 @@ html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup,
 	vertical-align: baseline;
 }
 
+b,
+strong {
+    font-weight: bold;
+}
 
+.italic {
+    font-style: italic;
+}
+
+/*********************
+CLEARFIX 
+*********************/
 .clearfix:after {
   content: "";
   display: table;

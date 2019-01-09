@@ -1,4 +1,6 @@
-//base styles
+/*********************
+BASE STYLES & SETUP
+*********************/
 
 @import "base";
 
@@ -16,7 +18,9 @@
 }
 
 
-
+/*********************
+HEADER AND BODY WRAPPER 
+*********************/
 #global-header {
 	width: 100%;
 }
@@ -38,38 +42,200 @@
 	box-sizing: border-box;
 }
 
-.video-list-wrapper {
-	margin-left: auto;
-	margin-right: auto;
-	overflow: visible;
-	position: relative;
-	text-align: center;
-	-webkit-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/*********************
+GRID 
+*********************/
+.grid {
+	box-sizing: border-box;
+}
 
-    @media screen and (min-width: 1591px) {
-    	width: 1425px;
-    }
-	@media screen and (min-width: 1306px) and (max-width: 1590px) {
-	    width: 1155px;
-	}
-    @media screen and (min-width: 1006px) and (max-width: 1305px) {
-    	width: 885px;
-    }
-    @media screen and (min-width: 701px) and (max-width: 1005px) {
-    	width: 615px;
-    }
-    @media screen and (max-width: 700px) {
-    	width: 345px;
-    }
+/*********************
+BUTTON 
+*********************/
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 5px;
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transition: background-color 0.2s ease-out;
+  background-color: #f55555;
+}
+
+/*********************
+FORM 
+*********************/
+form {
+	border: 2px solid #e6e4e2;
+	padding: 1.5rem 3rem;
+	border-radius: 0.5rem;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin: 0.5rem 0 1rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form label {
+	margin-bottom: 0.5rem; 
+	font-size: 1.1rem;
+	line-height: 1.5;
 }
 
 
 
-//test
+
+
+/*********************
+CAUTOSEL
+*********************/
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************
+TEST FILLS
+*********************/
 .fill {
 	background-color: $grey;
 	height: 1200px;
@@ -103,6 +269,18 @@
 
 .fill5 {
 	background-color: $majestic3;
+	height: 200px;
+	box-sizing: border-box;
+}
+
+.fill6 {
+	background-color: $majestic1;
+	height: 200px;
+	box-sizing: border-box;
+}
+
+.fill7 {
+	background-color: $modern1;
 	height: 200px;
 	box-sizing: border-box;
 }
