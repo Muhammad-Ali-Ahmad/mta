@@ -124,6 +124,10 @@ CLEARFIX
     margin-left: auto;
     margin-right: auto;
   }
+
+  .menu-toggle {
+    display: none;
+  }
 }
 @media screen and (min-width: 641px) and (max-width: 989px) {
   /*********************
@@ -155,6 +159,10 @@ CLEARFIX
   .btn {
     width: 20%;
   }
+
+  .menu-toggle {
+    display: none;
+  }
 }
 @media screen and (max-width: 640px) {
   /*********************
@@ -171,6 +179,30 @@ CLEARFIX
   *********************/
   .btn {
     width: 100%;
+  }
+
+  /*********************
+  NAV 
+  *********************/
+  .menu-icon {
+    display: block;
+    width: 10%;
+    margin-left: 0.3em;
+  }
+
+  .menu-icon:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .menu-icon .menu-icon-line {
+    width: 80%;
+    padding: 8%;
+    background: #000;
+    margin: 3% 0;
+    border-radius: 10px;
+    float: left;
   }
 }
 /*********************
@@ -256,6 +288,20 @@ form {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   line-height: 1.5;
+}
+
+/*********************
+MENU
+*********************/
+#global-header li {
+  list-style: none;
+}
+#global-header a {
+  color: #fff;
+}
+
+.flt-l {
+  float: left;
 }
 
 /*********************

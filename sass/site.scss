@@ -104,8 +104,22 @@ form {
 }
 
 
+/*********************
+MENU
+*********************/
 
+#global-header { 
+	li {
+		list-style: none;
+	}
+	a {
+		color: $white;
+	}
+}
 
+.flt-l {
+	float: left;
+}
 
 /*********************
 CAUTOSEL

@@ -13,3 +13,29 @@ BUTTON
 .btn {
 	width: 100%;
 }
+
+
+
+/*********************
+NAV 
+*********************/
+.menu-icon {
+    display: block;
+    width: 10%;
+    margin-left: 0.3em;
+}
+
+.menu-icon:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu-icon .menu-icon-line {
+    width: 80%;
+    padding: 8%;
+    background: #000;
+    margin: 3% 0;
+    border-radius: 10px;
+    float: left;
+}
