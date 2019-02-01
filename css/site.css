@@ -300,8 +300,20 @@ MENU
   color: #fff;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flt-l {
   float: left;
+}
+
+.main--nav-links li {
+  padding: 1rem;
+}
+
+.v-algn-m {
+  vertical-align: middle;
 }
 
 /*********************
