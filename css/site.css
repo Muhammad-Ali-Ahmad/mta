@@ -257,19 +257,25 @@ MENU
   color: #fff; }
 
 .inline-block {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .flt-l {
   float: left; }
 
 .main--nav-links li {
-  padding: 1rem;
-}
+  padding: 0.1rem;
+  border: 5px solid #143cb4;
+  transition: border-bottom 0.5s ease; }
+.main--nav-links li:hover {
+  border-bottom: 5px solid #5069d7; }
+.main--nav-links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.11111em; }
 
 .v-algn-m {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 /*********************
 CAUTOSEL

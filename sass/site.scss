@@ -127,8 +127,19 @@ MENU
 
 .main--nav-links {
 	li {
-		padding: 1rem;
+		padding: 0.1rem;
+    border: 5px solid $modern1;
+    transition: border-bottom 0.5s ease;
 	}
+  li:hover {
+    border-bottom: 5px solid $modern2;
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.11111em;
+  }
 }
 
 .v-algn-m {
