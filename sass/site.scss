@@ -29,9 +29,9 @@ HEADER AND BODY WRAPPER
 	max-width: 90%;
 	margin: 0 auto;
 	padding: 8px;
-	background-color: $modern1;
+	background-color: #f20400;
 	border-radius: 5px;
-	color: $modern1;
+	color: $white;
 	box-sizing: border-box;
 }
 
@@ -128,16 +128,16 @@ MENU
 .main--nav-links {
 	li {
 		padding: 0.1rem;
-    border: 5px solid $modern1;
-    transition: border-bottom 0.5s ease;
+    border: 5px solid #f20400;
+    transition: border-bottom 0.5s ease, font-weight 0.5s ease;
 	}
   li:hover {
-    border-bottom: 5px solid $modern2;
+    border-bottom: 5px solid $white;
+    font-weight: bold;
   }
   a {
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 1.11111em;
   }
 }
