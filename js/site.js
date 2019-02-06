@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    console.log("working");
+    $('.nav-icon').click(function(){
+		$('.main--nav-links').toggle();
+	});
 });
 
 // var slideIndex = 1;

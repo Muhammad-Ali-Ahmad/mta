@@ -108,15 +108,6 @@ form {
 MENU
 *********************/
 
-#global-header { 
-	li {
-		list-style: none;
-	}
-	a {
-		color: $white;
-	}
-}
-
 .inline-block {
 	display: inline-block;
 }
@@ -124,27 +115,11 @@ MENU
 .flt-l {
 	float: left;
 }
-
-.main--nav-links {
-	li {
-		padding: 0.1rem;
-    border: 5px solid #f20400;
-    transition: border-bottom 0.5s ease, font-weight 0.5s ease;
-	}
-  li:hover {
-    border-bottom: 5px solid $white;
-    font-weight: bold;
-  }
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.11111em;
-  }
-}
-
 .v-algn-m {
 	vertical-align: middle;
 }
+
+
 
 /*********************
 CAUTOSEL
