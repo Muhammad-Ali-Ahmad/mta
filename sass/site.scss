@@ -5,13 +5,18 @@ BASE STYLES & SETUP
 @import "base";
 
 
+
 @media screen and (min-width: 990px) {
 	@import "desktop";
 }
 
+
+
 @media screen and (min-width: 641px) and (max-width: 989px) {
 	@import "tablet";
 }
+
+
 
 @media screen and (max-width: 640px) {
 	@import "mobile";
