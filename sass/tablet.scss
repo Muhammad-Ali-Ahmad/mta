@@ -37,3 +37,14 @@ BUTTON
 .logo-wrapper, .main--nav-links, .social-media, .twitter-link {
 	display: inline-block;
 }
+
+
+.main--nav-links {
+    li {
+      padding: 0.3rem;
+  	}
+  a {
+
+    display: inline-block;
+  }
+}

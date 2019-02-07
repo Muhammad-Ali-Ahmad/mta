@@ -18,12 +18,10 @@ hgroup,
 nav,
 section,
 summary {
-  display: block;
-}
+  display: block; }
 
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -33,22 +31,19 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -o-text-size-adjust: 100%;
-  /* 2 */
-}
+  /* 2 */ }
 
 body {
   background: #fff;
   color: #000;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 /*********************
 TYPOGRAPHY 
 *********************/
 html, body, button, input, table, td, th {
-  font-family: Helvetica, Arial, Verdana, "latoregular", sans-serif;
-}
+  font-family: Helvetica, Arial, Verdana, "latoregular", sans-serif; }
 
 div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
 abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
@@ -58,21 +53,17 @@ tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
 figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark {
   border: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup, nav, section {
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 b,
 strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .italic {
-  font-style: italic;
-}
+  font-style: italic; }
 
 /*********************
 CLEARFIX 
@@ -80,8 +71,7 @@ CLEARFIX
 .clearfix:after {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
 @media screen and (min-width: 990px) {
   /*********************
@@ -89,112 +79,76 @@ CLEARFIX
   *********************/
   .grid {
     float: left;
-    padding: 10px;
-  }
+    padding: 10px; }
 
   .grid-1 {
-    width: 100%;
-  }
+    width: 100%; }
 
   .grid-1-2 {
-    width: calc(100%/2);
-  }
+    width: calc(100%/2); }
 
   .grid-1-3 {
-    width: calc(100%/3);
-  }
+    width: calc(100%/3); }
 
   .grid-1-4 {
-    width: calc(100%/4);
-  }
+    width: calc(100%/4); }
 
   .grid-1-5 {
-    width: calc(100%/5);
-  }
+    width: calc(100%/5); }
 
   .grid-2-3 {
-    width: calc((100%/3)*2);
-  }
+    width: calc((100%/3)*2); }
 
   /*********************
   FORM 
   *********************/
-  .form {
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #global-header li {
-    list-style: none;
-  }
-  #global-header a {
-    color: #fff;
-  }
-
   .main--nav-links li {
-    padding: 0.1rem;
-    border: 5px solid #f20400;
-    transition: border-bottom 0.5s ease, font-weight 0.5s ease;
-  }
-  .main--nav-links li:hover {
-    border-bottom: 5px solid #fff;
-    font-weight: bold;
-  }
+    padding: 0.5rem; }
   .main--nav-links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.11111em;
     display: inline-block;
-  }
+    font-size: 1.11111rem; }
 
   .nav-icon {
-    display: none;
-  }
+    display: none; }
 
-  .logo-wrapper, .main--nav-links, .social-media, .twitter-link {
-    display: inline-block;
-  }
-}
+  .logo-wrapper, .main--nav-links, .social-media, .twitter-link, nav {
+    display: inline-block; } }
 @media screen and (min-width: 641px) and (max-width: 989px) {
   /*********************
   GRID 
   *********************/
   .grid {
-    padding: 12.5px;
-  }
+    padding: 12.5px; }
 
   .grid-1, .grid-1-2, .grid-1-3 {
     float: none;
     width: 100%;
-    padding: 12.5px;
-  }
+    padding: 12.5px; }
 
   .grid-1-4 {
     float: left;
-    width: calc(100%/2);
-  }
+    width: calc(100%/2); }
 
   .grid-1-5 {
     float: left;
-    width: calc(100%/3);
-  }
+    width: calc(100%/3); }
 
   /*********************
   BUTTON 
   *********************/
   .btn {
-    width: 20%;
-  }
+    width: 20%; }
 
   .nav-icon {
-    display: none;
-  }
+    display: none; }
 
   .logo-wrapper, .main--nav-links, .social-media, .twitter-link {
-    display: inline-block;
-  }
-}
+    display: inline-block; }
+
+  .main--nav-links li {
+    padding: 0.3rem; }
+  .main--nav-links a {
+    display: inline-block; } }
 @media screen and (max-width: 640px) {
   /*********************
   GRID 
@@ -202,15 +156,13 @@ CLEARFIX
   .grid-1, .grid-1-2, .grid-1-3, .grid-1-4, .grid-1-5, .grid-2-3 {
     float: none;
     width: 100%;
-    padding: 10px;
-  }
+    padding: 10px; }
 
   /*********************
   BUTTON 
   *********************/
   .btn {
-    width: 100%;
-  }
+    width: 100%; }
 
   /*********************
   NAV 
@@ -218,58 +170,54 @@ CLEARFIX
   .nav-icon {
     display: block;
     width: 10%;
-    margin-left: 0.3em;
-  }
-
-  .nav-icon:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .nav-icon .nav-icon-line {
-    width: 80%;
-    padding: 8%;
-    background: #000;
-    margin: 3% 0;
-    border-radius: 10px;
-    float: left;
-  }
+    margin-left: 0.3em; }
 
   .header-wrapper {
+    overflow: auto; }
+
+  .nav-icon {
+    float: right;
+    margin: -1rem 1rem 0.5rem 0; }
+    .nav-icon .nav-icon-line {
+      width: 80%;
+      padding: 8%;
+      background: #fff;
+      margin: 3% 0;
+      border-radius: 10px;
+      float: left; }
+
+  .main--nav-links {
     display: none;
-  }
-}
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 1rem; }
+    .main--nav-links li {
+      padding: 0.2rem 0; } }
 /*********************
 HEADER AND BODY WRAPPER 
 *********************/
 #global-header {
-  width: 100%;
-}
+  width: 100%; }
 
 .header-wrapper {
   max-width: 90%;
   margin: 0 auto;
-  padding: 8px;
   background-color: #f20400;
   border-radius: 5px;
   color: #fff;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .body-wrapper {
   max-width: 90%;
   margin: 0 auto;
   padding: 8px 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /*********************
 GRID 
 *********************/
 .grid {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /*********************
 BUTTON 
@@ -282,19 +230,17 @@ BUTTON
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 5px;
   color: #fff;
   background-color: red;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .btn:hover {
   transition: background-color 0.2s ease-out;
-  background-color: #f55555;
-}
+  background-color: #f55555; }
 
 /*********************
 FORM 
@@ -302,43 +248,52 @@ FORM
 form {
   border: 2px solid #e6e4e2;
   padding: 1.5rem 3rem;
-  border-radius: 0.5rem;
-}
+  border-radius: 0.5rem; }
 
 .form-input {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
   margin: 0.5rem 0 1rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
 
 .form label {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  line-height: 1.5;
-}
+  line-height: 1.5; }
 
 /*********************
 MENU
 *********************/
 .inline-block {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .flt-l {
-  float: left;
-}
+  float: left; }
 
 .v-algn-m {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+
+#global-header li {
+  list-style: none; }
+#global-header a {
+  color: #fff; }
+
+.main--nav-links li {
+  transition: background-color 0.5s ease, text-shadow 0.3s ease; }
+.main--nav-links a:hover {
+  background-color: #ff5050;
+  text-shadow: 0.5px 0.5px #fff; }
+.main--nav-links li, .main--nav-links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center; }
 
 /*********************
 CAUTOSEL
@@ -347,13 +302,11 @@ CAUTOSEL
 .slideshow-container {
   max-width: 800px;
   position: relative;
-  margin: auto;
-}
+  margin: auto; }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
-}
+  display: none; }
 
 /* Next & previous buttons */
 .prev, .next {
@@ -368,19 +321,16 @@ CAUTOSEL
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+  user-select: none; }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
-}
+  border-radius: 3px 0 0 3px; }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+  background-color: rgba(0, 0, 0, 0.8); }
 
 /* Caption text */
 .text {
@@ -390,8 +340,7 @@ CAUTOSEL
   position: absolute;
   bottom: 8px;
   width: 100%;
-  text-align: center;
-}
+  text-align: center; }
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -399,8 +348,7 @@ CAUTOSEL
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
-}
+  top: 0; }
 
 /* The dots/bullets/indicators */
 .dot {
@@ -411,37 +359,28 @@ CAUTOSEL
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
-}
+  transition: background-color 0.6s ease; }
 
 .active, .dot:hover {
-  background-color: #717171;
-}
+  background-color: #717171; }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
-}
+  animation-duration: 1.5s; }
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.4;
-  }
+    opacity: .4; }
   to {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 @keyframes fade {
   from {
-    opacity: 0.4;
-  }
+    opacity: .4; }
   to {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 /*********************
 TEST FILLS
 *********************/
@@ -449,49 +388,41 @@ TEST FILLS
   background-color: #bfc1c3;
   height: 1200px;
   padding: 1em;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill1 {
   background-color: #000;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill2 {
   background-color: #fff;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill3 {
   background-color: #a1dff6;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill4 {
   background-color: #fac864;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill5 {
   background-color: #c86491;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill6 {
   background-color: #3c0a6e;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .fill7 {
   background-color: #143cb4;
   height: 200px;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=site.css.map */

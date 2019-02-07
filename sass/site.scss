@@ -33,7 +33,6 @@ HEADER AND BODY WRAPPER
 .header-wrapper {
 	max-width: 90%;
 	margin: 0 auto;
-	padding: 8px;
 	background-color: #f20400;
 	border-radius: 5px;
 	color: $white;
@@ -124,7 +123,29 @@ MENU
 	vertical-align: middle;
 }
 
+#global-header { 
+    li {
+        list-style: none;
+    }
+    a {
+        color: $white;
+    }
+}
+.main--nav-links {
+    li {
+      transition: background-color 0.5s ease, text-shadow 0.3s ease;
+    }
+  a:hover {
+    background-color: #ff5050;
+    text-shadow: 0.5px 0.5px #fff;
+  }
 
+  li, a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
 
 /*********************
 CAUTOSEL
