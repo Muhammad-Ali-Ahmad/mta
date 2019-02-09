@@ -103,10 +103,16 @@ CLEARFIX
   FORM 
   *********************/
   .main--nav-links li {
-    padding: 0.5rem; }
+    padding: 1.5rem 0.5rem; }
   .main--nav-links a {
     display: inline-block;
     font-size: 1.11111rem; }
+
+  .header-wrapper .site-logo {
+    display: block;
+    margin: 0.5rem 1rem 0 0.5rem; }
+    .header-wrapper .site-logo img {
+      width: 60px; }
 
   .nav-icon {
     display: none; }
@@ -139,6 +145,12 @@ CLEARFIX
   .btn {
     width: 20%; }
 
+  .header-wrapper .site-logo {
+    display: block;
+    margin: 0.3rem 0.7rem 0 0.3rem; }
+    .header-wrapper .site-logo img {
+      width: 50px; }
+
   .nav-icon {
     display: none; }
 
@@ -146,7 +158,7 @@ CLEARFIX
     display: inline-block; }
 
   .main--nav-links li {
-    padding: 0.3rem; }
+    padding: 1.2rem 0.3rem; }
   .main--nav-links a {
     display: inline-block; } }
 @media screen and (max-width: 640px) {
@@ -172,17 +184,26 @@ CLEARFIX
     width: 10%;
     margin-left: 0.3em; }
 
+  .header-wrapper .site-logo {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0 0 0.5rem; }
+    .header-wrapper .site-logo img {
+      width: 50px; }
+
   .header-wrapper {
-    overflow: auto; }
+    overflow: auto;
+    position: relative; }
 
   .nav-icon {
-    float: right;
-    margin: -1rem 1rem 0.5rem 0; }
+    position: absolute;
+    right: 15px;
+    top: 15px; }
     .nav-icon .nav-icon-line {
-      width: 80%;
-      padding: 8%;
+      width: 2.2rem;
+      padding: 0.2rem;
       background: #fff;
-      margin: 3% 0;
+      margin: 0.15rem 0;
       border-radius: 10px;
       float: left; }
 
@@ -200,9 +221,8 @@ HEADER AND BODY WRAPPER
   width: 100%; }
 
 .header-wrapper {
-  max-width: 90%;
   margin: 0 auto;
-  background-color: #f20400;
+  background-color: #bf1e20;
   border-radius: 5px;
   color: #fff;
   box-sizing: border-box; }
@@ -285,7 +305,7 @@ MENU
 #global-header a {
   color: #fff; }
 
-.main--nav-links li {
+.main--nav-links a {
   transition: background-color 0.5s ease, text-shadow 0.3s ease; }
 .main--nav-links a:hover {
   background-color: #ff5050;
@@ -294,6 +314,12 @@ MENU
   text-decoration: none;
   text-transform: uppercase;
   text-align: center; }
+
+.hidden {
+  display: none; }
+
+.flex {
+  display: flex; }
 
 /*********************
 CAUTOSEL

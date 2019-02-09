@@ -37,7 +37,7 @@ FORM
 
 .main--nav-links {
   li {
-      padding: 0.5rem;
+      padding: 1.5rem 0.5rem;
   }
   a {
     display: inline-block;
@@ -46,6 +46,13 @@ FORM
 }
 
 
+.header-wrapper .site-logo {
+	display: block;
+	margin: 0.5rem 1rem 0 0.5rem;
+	img {
+		width: 60px;
+	}
+}
 
 .nav-icon {
 	display: none;

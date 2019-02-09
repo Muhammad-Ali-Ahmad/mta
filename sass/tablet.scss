@@ -29,6 +29,13 @@ BUTTON
 	width: 20%;
 }
 
+.header-wrapper .site-logo {
+	display: block;
+	margin: 0.3rem 0.7rem 0 0.3rem;
+	img {
+		width: 50px;
+	}
+}
 
 .nav-icon {
 	display: none;
@@ -41,7 +48,7 @@ BUTTON
 
 .main--nav-links {
     li {
-      padding: 0.3rem;
+      padding: 1.2rem 0.3rem;
   	}
   a {
 

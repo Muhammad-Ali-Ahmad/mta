@@ -31,9 +31,8 @@ HEADER AND BODY WRAPPER
 }
 
 .header-wrapper {
-	max-width: 90%;
 	margin: 0 auto;
-	background-color: #f20400;
+	background-color: $jcred;
 	border-radius: 5px;
 	color: $white;
 	box-sizing: border-box;
@@ -132,7 +131,7 @@ MENU
     }
 }
 .main--nav-links {
-    li {
+    a {
       transition: background-color 0.5s ease, text-shadow 0.3s ease;
     }
   a:hover {
@@ -145,6 +144,14 @@ MENU
     text-transform: uppercase;
     text-align: center;
   }
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+  display: flex;
 }
 
 /*********************

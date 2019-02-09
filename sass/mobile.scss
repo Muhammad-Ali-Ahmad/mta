@@ -25,19 +25,29 @@ NAV
     margin-left: 0.3em;
 }
 
+.header-wrapper .site-logo {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0 0 0.5rem;
+    img {
+        width: 50px;
+    }
+}
 
 .header-wrapper {
     overflow: auto;
+    position: relative;
 }
  
 .nav-icon  {
-    float: right;
-    margin: -1rem 1rem 0.5rem 0;
+    position: absolute;
+    right: 15px;
+    top: 15px;
     .nav-icon-line {
-        width: 80%;
-        padding: 8%;
+        width: 2.2rem;
+        padding: 0.2rem;
         background: $white;
-        margin: 3% 0;
+        margin: 0.15rem 0;
         border-radius: 10px;
         float: left;
     }
