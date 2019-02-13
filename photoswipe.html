@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My site</title>
+
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<script type="text/javascript" src="js/jq.js"></script>
+
+
+		<!-- Core CSS file -->
+		<link rel="stylesheet" href="css/photoswipe.css"> 
+		<link rel="stylesheet" href="css/default-skin.css"> 
+
+		<!-- Core JS file -->
+		<script src="js/photoswipe.min.js"></script> 
+
+		<!-- UI JS file -->
+		<script src="js/photoswipe-ui-default.min.js"></script> 
+
+	</head>
+
+	<body>
+		<header role="banner" id="global-header">
+			<div class="header-wrapper">
+
+
+				<div class="logo-wrapper v-algn-m">
+					<a class="site-logo" href="//www.mta.tv/" title="MTA" rel="home">
+						<img property="logo" src="images/jc-logo.jpg" alt="MTA">
+					</a>
+				</div>
+
+
+
+
+				<div class="nav-icon clearfix">
+					<span class="nav-icon-line"></span>
+					<span class="nav-icon-line"></span>
+					<span class="nav-icon-line"></span>
+				</div>
+				
+				<div class="main--nav-links v-algn-m">
+					<nav class="v-algn-m">
+						<ul>
+							<a href="#"><li class="v-algn-m">Live</li></a>
+							<a href="#"><li class="v-algn-m">Programmes</li></a>
+							<a href="#"><li class="v-algn-m">TV Guide</li></a>
+							<a href="#"><li class="v-algn-m">Jalsa Qadian</li></a>
+							<a href="#"><li class="v-algn-m">Photo Gallery</li></a>
+							<a href="#"><li class="v-algn-m">Jalsa connect</li></a>
+							<a href="#"><li class="v-algn-m">Photo Gallery</li></a>
+						<ul>
+					</nav>
+
+				      <div class="social-media  v-algn-m hidden">
+				         <div class="facebook-link inline-block ">
+				         		<a href="https://www.facebook.com/tv.mtainternational" class="icon-facebook" target="_blank">Facebook</a>
+				         </div>
+				         <div class="twitter-link ">
+				         		<a href="https://twitter.com/muslimtv" class="icon-twitter" target="_blank">Twitter</a>
+			         	 </div>
+				      </div>
+				</div>
+			      
+<!-- 				<div class="inline-block search">
+					<form>
+						<label>Search</label>
+						<input type="text">
+						<button type="submit">Search</button>
+					</form>
+				</div> -->
+
+			</div>
+		</header>
+
+		<div class="body-wrapper">
+<button id="btn">Open PhotoSwipe</button>
+
+
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+		    <!-- Background of PhotoSwipe. 
+		         It's a separate element as animating opacity is faster than rgba(). -->
+		    <div class="pswp__bg"></div>
+
+		    <!-- Slides wrapper with overflow:hidden. -->
+		    <div class="pswp__scroll-wrap">
+
+		        <!-- Container that holds slides. 
+		            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		            Don't modify these 3 pswp__item elements, data is added later on. -->
+		        <div class="pswp__container">
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		        </div>
+
+		        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		        <div class="pswp__ui pswp__ui--hidden">
+
+		            <div class="pswp__top-bar">
+
+		                <!--  Controls are self-explanatory. Order can be changed. -->
+
+		                <div class="pswp__counter"></div>
+
+		                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+		                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+		                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+		                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+		                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+		                <!-- element will get class pswp__preloader--active when preloader is running -->
+		                <div class="pswp__preloader">
+		                    <div class="pswp__preloader__icn">
+		                      <div class="pswp__preloader__cut">
+		                        <div class="pswp__preloader__donut"></div>
+		                      </div>
+		                    </div>
+		                </div>
+		            </div>
+
+		            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		                <div class="pswp__share-tooltip"></div> 
+		            </div>
+
+		            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+		            </button>
+
+		            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+		            </button>
+
+		            <div class="pswp__caption">
+		                <div class="pswp__caption__center"></div>
+		            </div>
+
+		        </div>
+
+		    </div>
+
+		</div>
+
+
+
+
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/site.js"></script>
+
+<script>
+
+var openPhotoSwipe = function() {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // build items array
+    var items = [
+        {
+            src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+            w: 964,
+            h: 1024
+        },
+        {
+            src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+            w: 1024,
+            h: 683
+        }
+    ];
+    
+    // define options (if needed)
+    var options = {
+			 // history & focus options are disabled on CodePen        
+      	history: false,
+      	focus: false,
+
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+        
+    };
+    
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
+
+openPhotoSwipe();
+
+document.getElementById('btn').onclick = openPhotoSwipe;
+</script>
+
+
+
+</html>
