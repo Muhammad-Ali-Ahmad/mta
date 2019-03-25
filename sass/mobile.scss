@@ -19,11 +19,6 @@ BUTTON
 /*********************
 NAV 
 *********************/
-.nav-icon {
-    display: block;
-    width: 10%;
-    margin-left: 0.3em;
-}
 
 .header-wrapper .site-logo {
     display: block;
@@ -38,8 +33,12 @@ NAV
     overflow: auto;
     position: relative;
 }
+
  
 .nav-icon  {
+    display: block;
+    width: 10%;
+    margin-left: 0.3em;
     position: absolute;
     right: 15px;
     top: 15px;

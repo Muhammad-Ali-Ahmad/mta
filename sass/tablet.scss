@@ -55,3 +55,40 @@ BUTTON
     display: inline-block;
   }
 }
+
+
+.additional-nav-icon  {
+    display: block;
+    width: 8%;
+    margin-left: 0.3em;
+    position: absolute;
+    right: 0;
+    top: 21px;
+    .additional-nav-icon-line {
+        width: 2.2rem;
+        padding: 0.2rem;
+        background: $white;
+        margin: 0.15rem 0;
+        border-radius: 10px;
+        float: left;
+    }
+} 
+
+.additional-nav {
+	display: none;
+	position: absolute;
+	right: 8px;
+	background-color: $jcred;
+	border-radius: 5px;
+	color: $white;
+	box-sizing: border-box;
+	a {
+		display: block;
+	}
+}
+
+ .additional-nav a:hover {
+    border-radius: 5px;
+  }
+
+
