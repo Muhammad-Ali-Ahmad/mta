@@ -156,6 +156,38 @@ MENU
 
 
 
+.grid-menu {
+	width: calc(98%/3);
+	float: left;
+    text-align: center;
+    box-shadow: #bbb 0 3px 5px;
+    box-sizing: border-box;
+    margin: 3px;
+    transition: background-color 0.5s ease, text-shadow 0.3s ease;
+    position: relative;
+}
+
+.ukflag {
+	width: 100%;
+	opacity: 0.3;
+	z-index: -1; 
+	transition: opacity 0.5s ease, text-shadow 0.3s ease;
+}
+
+.ukflag:hover, .ukflag:focus {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.grid-menu a {
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	color: $white;
+	font-size: 2em;
+	text-decoration: none;
+	font-weight: bold;
+}
 
 
 /*********************
