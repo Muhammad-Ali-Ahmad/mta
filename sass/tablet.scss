@@ -21,6 +21,10 @@ GRID
 	width: calc(100%/3);
 }
 
+.grid-menu {
+	width: calc(97%/2);
+	float: left;
+}
 
 /*********************
 BUTTON 
@@ -91,4 +95,10 @@ BUTTON
     border-radius: 5px;
   }
 
+#jalsa-info {
+  width: 85%;
+}
 
+#jalsa-info:after {
+  width: 90%;
+}
